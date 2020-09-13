@@ -84,6 +84,13 @@ module.exports = {
                 'essay/20200715',
                 'essay/20200813song'
             ]
+        },
+        {
+            title: '教程',
+            collapsable: true,
+            children: [
+                {title: 'win10',children: ['win/20200913194812']}
+            ]
         }
 
     ]

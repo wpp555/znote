@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-if="false">
         <details class="custom-block details">
             <summary>打赏一下</summary>
             <br>
