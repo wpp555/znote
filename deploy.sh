@@ -28,7 +28,7 @@ git push -f git@github.com:wpp555/znote.git master:gh-pages
 cd ..
 #git init
 #git remote add origin git@github.com:zpj80231/znote.git
-git add .
+git add -A
 git commit -m 'update docs' 
 git push origin master
 
