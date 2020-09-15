@@ -92,7 +92,8 @@ module.exports = {
                 {title: 'win10',children: ['win/200913vm下安装DSM617']},
                 {title: 'git',children: [
                     'win/200915git安装',
-                    'win/200915git使用命令'
+                    'win/200915git使用命令',
+                    'win/200915git提交脚本'
                 ]},
             ]
         }
