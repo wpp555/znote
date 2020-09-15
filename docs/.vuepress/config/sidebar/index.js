@@ -89,7 +89,8 @@ module.exports = {
             title: '教程',
             collapsable: true,
             children: [
-                {title: 'win10',children: ['win/20200913194812']}
+                {title: 'win10',children: ['win/200913vm下安装DSM617']},
+                {title: 'git',children: ['win/200915git安装']},
             ]
         }
 
