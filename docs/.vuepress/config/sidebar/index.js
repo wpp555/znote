@@ -89,7 +89,10 @@ module.exports = {
       title: "教程",
       collapsable: true,
       children: [
-        { title: "win10", children: ["win/200913vm下安装DSM617"] },
+        { title: "win10", children: [
+          "win/200916win10系统设置",
+          "win/200913vm下安装DSM617"
+        ] },
         {
           title: "git",
           children: [
@@ -99,6 +102,7 @@ module.exports = {
           ],
         },
         { title: "编辑器", children: ["win/200916Vscode安装"] },
+        { title: "工具分享", children: ["normal/200916winrar"] },
       ],
     },
   ],
