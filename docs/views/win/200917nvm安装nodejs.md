@@ -67,5 +67,17 @@ nvm uninstall v12.14.0  # 删除已安装的指定版本，语法与install类�
 3.此时打开h5文件夹，发现多了nodejs快捷方式
 <img src="https://s1.ax1x.com/2020/09/17/wRFb6g.png" width="80%">
 
-4.使用没有问题，更改依赖位置可参考 [nodejs安装、更改全局位置](https://blog.csdn.net/wpp555/article/details/107839016)
+4.更改依赖位置
+```
+npm config ls           # 查看npm所有详细配置信息
+npm config get cache    # 查看npm缓存目录
+npm config get prefix   # 查看npm全局安装目录 
+# 修改npm cache目录
+npm config set cache D:\Apps\h5\nodejs\node_cache
+# 修改npm全局安装目录
+npm config set prefix D:\Apps\h5\nodejs\node_global
+```
+5.用户变量新增全局安装目录，才可以识别到全局目录
+<img src="https://s1.ax1x.com/2020/09/17/wf14Sg.png" alt="wf14Sg.png" border="0" />
 
+6.目前问题是切换node版本后，全局安装插件也随之消失，不知道能不能解决
