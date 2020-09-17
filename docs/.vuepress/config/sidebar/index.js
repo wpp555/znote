@@ -89,16 +89,23 @@ module.exports = {
       title: "教程",
       collapsable: true,
       children: [
-        { title: "win10", children: [
-          "win/200916win10系统设置",
-          "win/200913vm下安装DSM617"
-        ] },
+        {
+          title: "win10",
+          children: ["win/200916win10系统设置", "win/200913vm下安装DSM617"],
+        },
         {
           title: "git",
           children: [
             "win/200915git安装",
             "win/200915git使用命令",
             "win/200915git提交脚本",
+          ],
+        },
+        {
+          title: "linux",
+          children: [
+            "linux/200917n1装openwrt",
+            "linux/200917openwrt设置zerotier",
           ],
         },
         { title: "编辑器", children: ["win/200916Vscode安装"] },
