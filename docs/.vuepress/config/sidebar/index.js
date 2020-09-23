@@ -106,6 +106,8 @@ module.exports = {
           children: [
             "linux/200917n1装openwrt",
             "linux/200917openwrt设置zerotier",
+            "linux/200923openwrt使用frp",
+            "linux/200923openwrt使用sakurafrp",
           ],
         },
         { title: "编辑器", children: ["win/200916Vscode安装"] },
