@@ -59,4 +59,4 @@ categories:
    `zerotier-cli listpeers`
    <img src="https://s1.ax1x.com/2020/09/17/wWhaOH.png" alt="wWhaOH.png" border="0" />
 
-5.我配置了之后，延迟有时高有时低，没怎么用
+5.我配置了之后，延迟有时高有时低，没怎么用，传输文件也一直转圈，临时用吧
