@@ -61,13 +61,20 @@ chmod + x sakurafrp
 - 后续定时任务也是一个进程，名称不能和监测脚本查询的名称有相同之处
 
 ```
-vim /etc/init.d/sakurafrp
 #!/bin/sh /etc/rc.common
 START=99
 STOP=15
 
 start() {
-  # ps查询是否开启sakura
+    RUNNING=`ps | grep frpc_linux_arm64 | grep -v grep`
+  curtime=`date "+%F %H:%M:%S"`
+  if [ "$RUNNING" ]; then
+  # echo $curtime "test start" $RUNNING
+  exit
+  else
+  /etc/init.d/sakurafrp start
+  echo $curtime "sakurafrp starting" >> /root/wpp/sakura/sakurareboot.log
+  fi
 }
 ```
 
@@ -76,12 +83,12 @@ chmod + x sakurareboot
 7.定时任务，每 5 分钟执行`sakurareboot`脚本
 
 ```
-vim /etc/crontab/root
+vim /etc/crontabs/root
 # 添加脚本
-*/5 * * * *  /root/frp/frpdog.sh
+*/5 * * * *  /etc/init.d/sakurareboot start
 :wq保存退出
 # 加载任务,使之生效
-crontab /etc/crontab
+crontab /etc/crontabs/root
 # 查看任务
 crontab -l
 ```
