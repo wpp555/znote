@@ -57,11 +57,15 @@ categories:
     2. 网线将盒子和电脑连接在一起，电脑ip设置自动获取，网址输入192.168.1.1
 ```
 
-3.网络-接口-修改静态 ip 为局域网随意不重复 ip，网关设置路由器 ip 4.网络-接口-lan 的修改-物理设置 取消桥接
+3.网络-接口-修改静态 ip 为局域网随意不重复 ip，网关设置路由器 ip
+
+- DHCP 一个解释十分详细的视频 [旁路由设置教程：推开网关大门理解旁路由设置方法](https://www.bilibili.com/video/BV18Z4y1N7UN)
+
+  4.网络-接口-lan 的修改-物理设置 取消桥接选择 `以太网设配器 lan`
 
 <img src="https://s1.ax1x.com/2020/09/17/wWBROK.png">
 
-防火墙新增
+5.网络-防火墙 - 自定义规则 新增
 
 ```
 # This file is interpreted as shell script.
@@ -78,6 +82,6 @@ iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53
 iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 ```
 
-3.连接网线重启即可使用
+6.连接网线重启即可使用，后续什么的，看视频吧，基本结束
 
-4.后续 DHCP 什么的，看视频吧，租房住，没这条件
+7. [ssr 简单设置](/views/linux/200925openwrt使用ssr.html)
