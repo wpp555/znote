@@ -55,7 +55,7 @@ chmod + x sakurafrp
 /etc/init.d/sakurafrp stop	# 关闭，没写
 ```
 
-6.创建一个脚本`sakurareboot`，监测是否开启 sakurafrp，未开则启动`sakurafrp`脚本
+6.创建一个脚本`sakurareboot`，监测是否开启 sakurafrp，未开则启动`sakurafrp`脚本，有问题，看下一步
 
 - 监测脚本本身占用进程，必须要去除
 - 后续定时任务也是一个进程，名称不能和监测脚本查询的名称有相同之处
@@ -80,7 +80,44 @@ start() {
 
 chmod + x sakurareboot
 
-7.定时任务，每 5 分钟执行`sakurareboot`脚本
+7.上一步有问题，如果断电，此定时任务消失,换一种思路，每次执行都要先删除定时任务，然后添加新的定时任务，开机执行此任务即可，所以将第 6 步任务替换
+
+```
+#!/bin/sh /etc/rc.common
+START=99
+STOP=15
+
+start() {
+
+  # 删除定时任务中`sakurareboot`所有行
+  sed -i '/sakurareboot/d' /etc/crontabs/root
+
+  # 睡眠3s
+  sleep 3
+
+  # 重新设定任务5分钟执行一次
+  sed -i '$a */5 * * * *  /etc/init.d/sakurareboot start' /etc/crontabs/root
+  # 加载任务,使之生效
+  crontab /etc/crontabs/root
+
+  RUNNING=`ps | grep frpc_linux_arm64 | grep -v grep`
+  curtime=`date "+%F %H:%M:%S"`
+  if [ "$RUNNING" ]; then
+  # echo $curtime "test start" $RUNNING
+  exit
+  else
+  /etc/init.d/sakurafrp start
+  echo $curtime "sakurafrp starting" >> /root/wpp/sakura/sakurareboot.log
+  fi
+}
+```
+
+```
+
+
+```
+
+8.定时任务，看看
 
 ```
 vim /etc/crontabs/root
@@ -92,11 +129,7 @@ crontab /etc/crontabs/root
 # 查看任务
 crontab -l
 ```
-8.上一步有问题，如果断电，此定时任务消失,换一种思路，每次执行都要先删除定时任务，然后添加新的定时任务，开机执行此任务即可
-```
-  sed
- echo "*/50 * * * *  /etc/init.d/sakurareboot start" >> /etc/crontabs/root 
-```
+
 ## 问题
 
 1. 由于家里没网，切断电源将近一天，启动发现没有启动`sakurafrp`(明明设置了开机启动),计划任务也没有了，不知道哪个的问题
