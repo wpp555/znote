@@ -92,7 +92,11 @@ crontab /etc/crontabs/root
 # 查看任务
 crontab -l
 ```
-
+8.上一步有问题，如果断电，此定时任务消失,换一种思路，每次执行都要先删除定时任务，然后添加新的定时任务，开机执行此任务即可
+```
+  sed
+ echo "*/50 * * * *  /etc/init.d/sakurareboot start" >> /etc/crontabs/root 
+```
 ## 问题
 
 1. 由于家里没网，切断电源将近一天，启动发现没有启动`sakurafrp`(明明设置了开机启动),计划任务也没有了，不知道哪个的问题
