@@ -91,7 +91,11 @@ module.exports = {
       children: [
         {
           title: "win10",
-          children: ["win/200916win10系统设置", "win/200913vm下安装DSM617"],
+          children: [
+            "win/200916win10系统设置",
+            "win/200913vm下安装DSM617",
+            "win/200928z390mpro4唤醒",
+          ],
         },
         {
           title: "git",
@@ -112,10 +116,7 @@ module.exports = {
         },
         {
           title: "群晖",
-          children: [
-            "dsm/200926vm-dsm617",
-            "dsm/200926vm-dsm半洗白"
-          ],
+          children: ["dsm/200926vm-dsm617", "dsm/200926vm-dsm半洗白"],
         },
         { title: "编辑器", children: ["win/200916Vscode安装"] },
         { title: "工具分享", children: ["normal/200916winrar"] },
