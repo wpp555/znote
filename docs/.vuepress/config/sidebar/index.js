@@ -116,7 +116,11 @@ module.exports = {
         },
         {
           title: "群晖",
-          children: ["dsm/200926vm-dsm617", "dsm/200926vm-dsm半洗白"],
+          children: [
+            "dsm/200926vm-dsm617",
+            "dsm/200926vm-dsm半洗白",
+            "dsm/200930猫盘plus试用",
+          ],
         },
         { title: "编辑器", children: ["win/200916Vscode安装"] },
         { title: "工具分享", children: ["normal/200916winrar"] },
