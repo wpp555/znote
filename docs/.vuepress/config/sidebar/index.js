@@ -124,6 +124,10 @@ module.exports = {
           title: "小米ac2100",
           children: ["course/ac2100/201013小米ac2100刷breed"],
         },
+        {
+          title: "j4125使用",
+          children: ["course/j4125/201013Exsi简单思路"],
+        },
       ],
     },
   ],
