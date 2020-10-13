@@ -31,7 +31,7 @@ chmod + x frpc_linux_arm64
 
 3.尝试一下使用， `./frpc_linux_arm64`,输入属于自己的密钥后选择一个节点 _命令行启动只能选择一个节点下的隧道_
 
-4.openwrt 脚本 `vim /etc/init.d/sakurafrp`,
+4.openwrt 脚本 `vim /etc/init.d/sakurafrp`,`空格+&` 异步执行这句命令
 
 ```
 vim /etc/init.d/sakurafrp
@@ -43,7 +43,7 @@ start() {
   # 开启 #24下的所有隧道
   /root/wpp/sakura/frpc_linux_arm64 -f 1234567890:n24
   # 开启同一节点下的隧道(不是同一节点会报错)
-  # /root/wpp/sakura/frpc_linux_arm64 -f 1234567890:1000,1001,1002
+  # /root/wpp/sakura/frpc_linux_arm64 -f 1234567890:1000,1001,1002 &
 }
 ```
 
@@ -66,7 +66,7 @@ START=99
 STOP=15
 
 start() {
-    RUNNING=`ps | grep frpc_linux_arm64 | grep -v grep`
+  RUNNING=`ps | grep frpc_linux_arm64 | grep -v grep`
   curtime=`date "+%F %H:%M:%S"`
   if [ "$RUNNING" ]; then
   # echo $curtime "test start" $RUNNING
