@@ -53,7 +53,7 @@ categories:
         mv ./*.moon ./moons.d/
     6、systemctl restart zerotier-one
    ```
-2. 服务端设置好之后，记住 moom 产生的 id，不需要第二次
+2. 服务端设置好之后，记住 moom 产生的 id，不需要第二次，可以在`/var/lib/zerotier-one/moon.json`文件中第一行 id 获取
 3. xshell 连接 openwrt，加入 moon 的命令
    `zerotier-cli orbit moomid moomid` 4.检验的命令,出现箭头所指字段即为加入成功
    `zerotier-cli listpeers`
