@@ -101,6 +101,7 @@ module.exports = {
             "course/win/200928z390mpro4唤醒",
           ],
         },
+        { title: "centos7", children: ["course/centos7/201016express执行sh"] },
         { title: "编辑器", children: ["course/win/200916Vscode安装"] },
         { title: "工具分享", children: ["course/normal/200916winrar"] },
         {
