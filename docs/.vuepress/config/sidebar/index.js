@@ -123,7 +123,12 @@ module.exports = {
         },
         {
           title: "小米ac2100",
-          children: ["course/ac2100/201013小米ac2100刷breed"],
+          children: [
+            "course/ac2100/201013小米ac2100刷breed",
+            "course/ac2100/201017ac2100breed刷op",
+            "course/ac2100/201017ac2100breed刷padavan",
+            "course/ac2100/201017ac2100breed刷回官方固件",
+          ],
         },
         {
           title: "j4125使用",
