@@ -84,4 +84,4 @@ iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
 
 6.连接网线重启即可使用，后续什么的，看视频吧，基本结束
 
-7. [ssr 简单设置](/views/linux/200925openwrt使用ssr.html)
+7. [ssr 简单设置](/views/course/n1/200925openwrt使用ssr.html)

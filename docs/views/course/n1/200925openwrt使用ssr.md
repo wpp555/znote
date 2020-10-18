@@ -40,7 +40,21 @@ _技术都是互通的_
 - 先明白 ssr 的原理，这方面教程 youtube 上好多大 V 都有视频，但是不出去看不了
 - 我们不需要弄懂高深的，只需要知道我们的旁路由上存在`KoolProxyR plus+` `ShadowSocksR Plus+`,然后需要自己找个机场，将购买的机场节点添加到插件的服务器节点，然后选择一个延迟低的即可。其他负载均衡什么的，出去再看大 v 视频吧
 - ustravel.cloud 非广告，本人仅知道一个
+- liuns.com 特别差
 
 ## 其他
 
 华为手机安装谷歌三件套还是不行，连 chrome 浏览器都时不时闪退
+
+## 节点测速
+
+1. [github链接](https://github.com/tindy2013/stairspeedtest-reborn/releases)选择`v0.6.1-beta`版，下载win64版
+2. 解压到文件夹，点击`webgui.bat`，出现一界面
+<img src="https://s1.ax1x.com/2020/10/18/0jGqfg.md.png" alt="0jGqfg.png" border="0" />
+
+3. 填上订阅地址，提交，下面会出现订阅列表，不出来检查一下是否正确
+
+4.等，测试慢
+
+<img src="https://s1.ax1x.com/2020/10/18/0jJS00.png">
+<img src="https://s1.ax1x.com/2020/10/18/0jJEc9.png">
