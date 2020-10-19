@@ -94,6 +94,7 @@ module.exports = {
           children: [
             "course/win/200916win10基本设置",
             "course/win/200916win10开发设置",
+            "course/win/200916win10重装系统",
             "course/win/200915git安装",
             "course/win/200915git使用命令",
             "course/win/200915git提交脚本",
