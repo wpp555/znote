@@ -129,7 +129,7 @@ crontab /etc/crontabs/root
 # 查看任务
 crontab -l
 ```
-
+9.可以参考 [ESXI如何使用普通的UPS做到断电自动关机，保护硬盘不受到损伤](https://www.vediotalk.com/archives/18546),上面有更精准的判断
 ## 问题
 
 1. 由于家里没网，切断电源将近一天，启动发现没有启动`sakurafrp`(明明设置了开机启动),计划任务也没有了，不知道哪个的问题
